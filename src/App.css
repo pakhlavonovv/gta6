@@ -1,38 +1,579 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: black;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+.navbar img {
+  width: 60px;
+  height: 60px;
+  margin-right: -1000px;
+}
+.Home {
+  color: white;
+  transition: all ease 0.3s;
+}
+
+.nav-item a {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-item {
+  margin-top: 7px;
+  text-align: center;
+  margin-left: 40px;
+  display: inline-block;
+  position: relative;
+  transition: all ease 0.2s;
+}
+.nav-item:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+}
+.d-flex .form-control{
+  width: 300px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn {
+  background-color: rgb(255, 166, 0);
+  color: black;
+  transition: all ease 0.3s ease;
+  border: none;
+  outline: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.btn:hover {
+  background-color: orange;
+  box-shadow: 0 0 10px 0 white;
+  color: black;
+}
+
+.btn:focus:hover {
+  background-color: rgb(255, 166, 0);
+  color: black;
+}
+
+input {
+  background-color: orange;
+  transition: all ease 0.5s;
+}
+
+input:hover {
+  box-shadow: 0 0 10px 0 white;
+}
+
+input:focus::after {
+  box-shadow: 0 0 10px 0 orange;
+}
+
+.Games {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Support {
+  color: white;
+}
+.Store{
+  color: white;
+}
+.navbar-nav {
+  margin-left: 70px;
+  margin-bottom: 30px;
+}
+.characters{
+  margin-top: 100px;
+  color: white;
+}
+.main__character{
+  margin-top: 50px;
+  transition: all ease 0.3s;
+}
+.main__character:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px orange;
+  background-color: #161616;
+}
+.dis h1{
+  margin-top: 100px;
+  margin-left: 50px;
+  font-family: 'Pricedown BL', sans-serif;     
+  color: orange;    
+  font-size: 90px;    
+  text-shadow: 1px 1px 2px rgb(191, 23, 23), 0 0 1em rgb(255, 200, 0); 
+}
+.card img{
+  width: 100%;
+  height: 100%;
+}
+.card-title{
+  text-align: center; 
+  color: white;
+}
+.card-text{
+  text-align: center;
+  color: white;
+}
+.card-body{
+  background-color: black;
+}
+.card{
+  width: 300px;
+  height: 360px;
+  transition: all ease 0.4s;
+  box-shadow: 0 0 5px 0 white;
+  border: none;
+}
+.card:hover{
+  box-shadow: 0 0 20px 0 orange;
+  transform: translateY(-5px);
+  background-color: #161616;
+}
+.card img{
+  width: 100%;
+  height: 100%;
+}
+.button{
+  margin-left: 70px;
+  padding: 3px;
+}
+.movies{
+  margin-top: 50px;
+  display: flex;
+}
+.gta__item2{
+  margin-left: 50px;
+}
+.title__movie{
+  margin-top: 100px;
+  color: orange; 
+  font-size: 60px;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgb(191, 23, 23), 0 0 1em rgb(255, 200, 0); 
+}
+.characters2{
+  color: white;
+  margin-top: 40px;
+}
+.discr__p2{
+  color: white;
+  width: 500px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.text{
+  margin: 0 auto;
+  text-align: center;
+}
+.wrapper{
+  margin: 0 auto;
+  margin-top: 70px;
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
+}
+.slide-show{
+  width: 280px;
+  height: 360px;
+  padding: 2rem 1rem;
+  background: #fff;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  margin: 0 auto;
+  margin-left: 40px;
+  box-shadow: 0 7px 10px rgba(0,0,0,0,5);
+  transition: 0.5s ease-in-out;
+}
+.slide-show:hover{
+  transform: translateY(-10px);
+}
+.slide-show::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(56, 56, 56, 0.5), rgb(255, 174, 0));
+  z-index: 2;
+  transition: 0.5s all;
+  opacity: 0;
+}
+.slide-show:hover:before{
+  opacity: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.slide-show img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+.character2{
+  text-align: center;
+  color: orange;
+  margin-top: 50px;
+  font-family: 'Pricedown BL', sans-serif;
+  font-size: 100px;
+  text-shadow: 1px 1px 2px rgb(191, 23, 23), 0 0 1em rgb(255, 200, 0);                                 
+}
+.slide-show .info{
+  position: relative;
+  z-index: 3;
+  color: white;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.5s all;
+}
+.slide-show:hover .info{
+  opacity: 1;
+  transform: translateY(0px);
+}
+.slide__btn{
+  width: 100px;
+  height: 30px;
+  background-color: #161616;
+  color: white;
+  border-radius: 7px;
+}
+.Gta__m{
+  color: orange;
+  font-size: 90px;
+  text-align: center;
+  margin-top: 50px;
+  font-family: 'Pricedown BL', sans-serif;
+  text-shadow: 1px 1px 2px rgb(191, 23, 23), 0 0 1em rgb(255, 200, 0); 
+}
+.m__title{
+  margin-top: 30px;
+  color: orange;
+  font-family: 'Pricedown BL', sans-serif;
+  text-shadow: 1px 1px 2px rgb(191, 23, 23), 0 0 1em rgb(255, 200, 0); 
+  font-style: normal;
+  font-size: 90px;
+  text-align: center;
+}
+.films__item h1{
+  color: white;
+  margin-left: 940px;
+}
+.info__title{
+  margin-top: 200px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  width: 1100px;
+}
+.dis__six{
+  color: orange;
+  width: 1100px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.iframe{
+  margin: 0 auto;
+  margin-top: 50px;
+  box-shadow: 0 0 10px 0 white;
+  transition: all ease 0.5s;
+}   
+.iframe:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px 0 orange;
+}
+.films__item .h1__gta{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: orange;
+  font-family: 'Pricedown BL', sans-serif;
+  font-size: 90px;
+  text-shadow: 1px 1px 2px rgb(191, 23, 23), 0 0 1em rgb(255, 200, 0); 
+}
+.iframe-h1{
+  display: flex;
+}
+.h1__gta{
+  margin: 0 auto;
+  margin-top: 260px;
+  color:orange;
+  font-family: 'Pricedown BL', sans-serif;
+  font-size: 120px;
+  text-shadow: 1px 1px 2px rgb(191, 23, 23), 0 0 1em rgb(255, 200, 0); 
+}
+.twentyfv{
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+  width: 900px;
+}
+
+.title__update{
+  color: orange;
+  text-shadow: 1px 1px 2px rgb(191, 23, 23), 0 0 1em rgb(255, 200, 0);
+  font-family: 'Pricedown BL', sans-serif;
+  font-style: normal;
+  text-align: center;
+  padding: 15px;
+}
+.update img{
+  width: 60%;
+  height: 400px;
+}
+.title__up{
+  font-size: 80px;
+  color: orange;
+  text-shadow: 1px 1px 2px rgb(191, 23, 23), 0 0 1em rgb(255, 200, 0);
+  font-family: 'Pricedown BL', sans-serif;
+  font-style: normal;
+  text-align: center;
+  padding: 15px;
+}
+.update__list{
+  margin-top: 30px;
+}
+.update__item{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 200px;
+  -webkit-mask-image: radial-gradient(ellipse, rgba(0,0,0,1) 60%, rgba(0,0,0,0));
+  mask-image: radial-gradient(ellipse, rgba(0,0,0,1) 60%, rgba(0,0,0,0));
+}
+.update__item:nth-child(even){
+  flex-direction: row-reverse;
+}
+.update__item--inner{
+  margin-left: 30px;
+  color: white;
+  font-size: 24px;
+  width: 400px;
+}
+.h1__up{
+  font-size: 50px;
+  color: orange;
+  text-shadow: 2px 2px 2px rgb(191, 23, 23), 0 0 2em rgb(255, 200, 0);
+  font-family: 'Pricedown BL', sans-serif;
+  font-style: normal;
+}
+.Buy__Now{
+  color: orange;
+  text-shadow: 1px 3px 3px rgb(191, 23, 23), 0 0 2em rgb(255, 200, 0);
+  font-size: 90px;
+  font-family: 'Pricedown BL', sans-serif;
+  font-style: normal;
+}
+.card__b{
+  margin-top: 50px;
+  width: 480px;
+  height: 800px;
+  border: 1px solid white;
+  margin-bottom: 20px;
+}
+.img__b img{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+.intro__b{
+  color: white;
+  margin-left: 25px;
+}
+.span b{
+  margin-left: 5px;
+}
+.card__b .users{
+  margin-top: 5px;
+}
+.button__download .btn__download{
+  margin-top: 100px;
+  margin-left: 17px;
+  width: 400px;
+  height: 80px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: orange;
+  font-size: 40px;
+  font-family: 'Pricedown BL', sans-serif;
+  transition: all ease 0.3s;
+}
+.button__download .btn__download:hover{
+  background-color: white;
+  color: black;
+  text-shadow: none;
+}
+.img__b2{
+  width: 100%;
+  height: 100%;
+}
+.users .users__pl{
+  width: 200px;
+}
+.second__card{
+  margin-left: 600px;
+  margin-bottom: 200px;
+}
+.first__card{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.working__item{
+  display: flex;
+  align-items: center;
+}
+
+.dfg{
+  display: flex;
+}
+
+.second__card{
+  margin-top: -850px;
+}
+
+.update{
+  padding: 0 0 0 56px;
+}
+.gta__six{
+  width: 1000px;
+  height: 800px;
+  border: 1px solid white;
+}
+.gta__img{
+  width: 100%;
+  height: 100%;
+}
+.img__o{
+  width: 100%;
+  height: 100%;
+  margin-left: -30px;
+  margin-right: -30px;
+}
+.img__b{
+  padding: 27px;
+}
+.bg{
+  width: 1500px;
+  height: 500px;
+  background-color: rgb(255, 183, 0);
+  margin: 0 auto;
+}
+.footer__title{
+  color: black;
+  text-align: center; 
+  font-family: 'Pricedown BL', sans-serif;         
+}
+.f__title{
+  font-size: 70px;
+}
+.subcribe__item h4{
+  color: black;
+}
+.subcribe__list{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  margin-left: 200px;
+  margin-right: -100px;
+
+}
+.subcribe__item{
+  margin-left: -1000px;
+  margin-right: 200px;
+}
+.select{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: -55px;
+  margin-left: 1100px;
+}
+.language{
+  width: 190px;
+  height: 50px;
+  border: none;
+  background-color: transparent;
+  color: black;
+  outline: none;
+  font-size: 20px;
+}
+
+.language option{
+  background-color: black;
+  color: white;
+}
+.privacy__list{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 100px;
+  right: -100px;
+}
+.privacy__item{
+  margin-left: -900px;
+}
+.privacy__item h5{
+  color: black;
+}
+.pr{
+  margin-right: -100px;
+}
+.footer__list{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-inline-end: -2350px;
+  margin-top: -60px;
+}
+.privacy__logo img{
+  width: 30px;
+  height: 30px;
+}
+.privacy__logo{
+  margin-left: -2500px;
+}
+.img__logo{
+  width: 30px;
+  height: 30px;
+  margin-right: 1400px;
+}
+.map{
+  color: black;
+  text-align: end;  
+  margin-top: 120px;
+}
+.f_rockstar{
+  margin-top: -30px;
+  margin-left: -27px;
+}
+.text{
+  color: black;    
+}
+.Action__footer{
+  margin-top: -40px;
 }
